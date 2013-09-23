@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="MySuite">
+<testng>
+useDefaultListeners="false"
+</testng>
+<listeners>
+<listener class-name="org.uncommons.reportng.HTMLReporter" />
+</listeners>
+	<test name="SampleTest" preserve-order="true">
+		<classes>
+			<class name="DragAndDrop" /> 
+		</classes>
+	</test>
+	<test name="GmailTest" preserve-order="true">
+		<classes>
+			<class name="Gmail" />
+			
+		</classes>
+	</test>
+	
+	<test name="WindowTest" preserve-order="true">
+		<classes>
+			<class name="WindowHandling" /> 
+		</classes>
+	</test>
+</suite>

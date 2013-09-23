@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>TestNG Report</title><style type="text/css">table {margin-bottom:10px;border-collapse:collapse;empty-cells:show}th,td {border:1px solid #009;padding:.25em .5em}th {vertical-align:bottom}td {vertical-align:top}table a {font-weight:bold}.stripe td {background-color: #E6EBF9}.num {text-align:right}.passedodd td {background-color: #3F3}.passedeven td {background-color: #0A0}.skippedodd td {background-color: #DDD}.skippedeven td {background-color: #CCC}.failedodd td,.attn {background-color: #F33}.failedeven td,.stripe .attn {background-color: #D00}.stacktrace {white-space:pre;font-family:monospace}.totop {font-size:85%;text-align:center;border-bottom:2px solid #000}</style></head><body><table><tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr><tr><th colspan="7">MySuite</th></tr><tr><td><a href="#t0">SampleTest</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">66,226</td><td></td><td></td></tr><tr class="stripe"><td><a href="#t1">GmailTest</a></td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num">16,619</td><td></td><td></td></tr><tr><td><a href="#t2">WindowTest</a></td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">230,086</td><td></td><td></td></tr><tr><th>Total</th><th class="num">3</th><th class="num">0</th><th class="num attn">1</th><th class="num">312,931</th><th colspan="2"></th></tr></table><table><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">MySuite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">SampleTest &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">DragAndDrop</td><td><a href="#m0">schooleducation</a></td><td rowspan="1">1378011656654</td><td rowspan="1">56440</td></tr></tbody><tbody id="t1"><tr><th colspan="4">GmailTest &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">Gmail</td><td><a href="#m1">emptyLogin</a></td><td rowspan="1">1378011713968</td><td rowspan="1">7304</td></tr><tr class="passedeven"><td><a href="#m2">invalidLogin</a></td><td rowspan="1">1378011721272</td><td rowspan="1">8613</td></tr></tbody><tbody id="t2"><tr><th colspan="4">WindowTest &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">WindowHandling</td><td><a href="#m3">windowTest</a></td><td rowspan="1">1378011734785</td><td rowspan="1">225233</td></tr></tbody></table><h2>SampleTest</h2><h3 id="m0">DragAndDrop#schooleducation</h3><table class="result"></table><p class="totop"><a href="#summary">back to summary</a></p><h2>GmailTest</h2><h3 id="m1">Gmail#emptyLogin</h3><table class="result"></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m2">Gmail#invalidLogin</h3><table class="result"></table><p class="totop"><a href="#summary">back to summary</a></p><h2>WindowTest</h2><h3 id="m3">WindowHandling#windowTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
+Build info: version: &apos;2.34.0&apos;, revision: &apos;11cd0ef&apos;, time: &apos;2013-08-06 17:10:22&apos;
+System info: os.name: &apos;Windows 7&apos;, os.arch: &apos;x86&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_25&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:307)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:404)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:344)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:299)
+	at WindowHandling.windowTest(WindowHandling.java:48)
+Caused by: org.apache.http.conn.HttpHostConnectException: Connection to http://127.0.0.1:7055 refused
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:190)
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:151)
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:125)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:640)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:479)
+	at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:906)
+	at org.openqa.selenium.remote.HttpCommandExecutor.fallBackExecute(HttpCommandExecutor.java:337)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:298)
+	at org.openqa.selenium.firefox.internal.NewProfileExtensionConnection.execute(NewProfileExtensionConnection.java:133)
+	at org.openqa.selenium.firefox.FirefoxDriver$LazyCommandExecutor.execute(FirefoxDriver.java:367)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
+	... 29 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:127)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180)
+	... 39 more
+... Removed 24 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p></body></html>

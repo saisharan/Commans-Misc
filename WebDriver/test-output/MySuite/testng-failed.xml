@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [MySuite]">
+  <listeners>
+    <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+  </listeners>
+  <test name="WindowTest(failed)">
+    <classes>
+      <class name="Gmail">
+        <methods>
+          <include name="setUp"/>
+          <include name="stop"/>
+        </methods>
+      </class> <!-- Gmail -->
+      <class name="DragAndDrop">
+        <methods>
+          <include name="stop"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- DragAndDrop -->
+      <class name="WindowHandling">
+        <methods>
+          <include name="setUp"/>
+          <include name="windowTest"/>
+        </methods>
+      </class> <!-- WindowHandling -->
+    </classes>
+  </test> <!-- WindowTest(failed) -->
+</suite> <!-- Failed suite [MySuite] -->
